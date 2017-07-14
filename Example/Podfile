@@ -1,5 +1,9 @@
 use_frameworks!
 
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/XXCommonTools/XXRepos.git'
+
+
 target 'MBHudManager_Example' do
   pod 'MBHudManager', :path => '../'
 

@@ -7,8 +7,12 @@
 //
 
 #import "XXViewController.h"
+#import <MBHudManager/MBHudManager.h>
+
 
 @interface XXViewController ()
+
+
 
 @end
 
@@ -18,8 +22,24 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-}
+    
 
+    
+}
+- (void)viewDidAppear:(BOOL)animated {
+
+    [super viewDidAppear:animated];
+    
+    dispatch_after(10, dispatch_get_main_queue(), ^{
+        
+        [[MBHudManager sharedManager] showLoadingWithText:@"正在加载信息..." inView:self.view];
+        
+        dispatch_after(20, dispatch_get_main_queue(), ^{
+           
+            [[MBHudManager sharedManager] showMessage:@"请求成功"];
+        });
+    });
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

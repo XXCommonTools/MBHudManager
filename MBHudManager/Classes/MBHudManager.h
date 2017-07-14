@@ -6,9 +6,11 @@
 //  Copyright © 2017年 wanxue. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <XXNetworkingAnimationAction/XXNetworkAnimation.h>
 
-@interface MBHudManager : NSObject
+
+@interface MBHudManager : NSObject<XXNetworkingAnimationAction>
 
 + (instancetype)sharedManager;
 
@@ -19,16 +21,17 @@
  */
 - (void)showMessage:(NSString *)message;
 /**
- 在view上显示遮罩信息
- 
- @param waitMessage 遮罩信息
- @param view 显示的视图 如果为nil则显示在window上面
+ 显示加载遮罩
+
+ @param text 文字
+ @param view 显示的视图，如果为nil则显示在window上面
  */
-- (void)showWait:(NSString *)waitMessage inView:(UIView *)view;
+- (void)showLoadingWithText:(NSString *)text inView:(UIView *)view;
+
 /**
- 隐藏遮罩
+ 隐藏加载遮罩
  */
-- (void)hideWait;
+- (void)hideLoading;
 
 
 @end

@@ -1,7 +1,7 @@
 {
   "name": "MBHudManager",
-  "version": "0.1.0",
-  "summary": "A short description of MBHudManager.",
+  "version": "0.1.1",
+  "summary": "MBHudManager is a HUD tool.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/XXCommonTools/MBHudManager",
   "license": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/XXCommonTools/MBHudManager.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "8.0"
@@ -22,6 +22,9 @@
   "dependencies": {
     "MBProgressHUD": [
       "~> 1.0.0"
+    ],
+    "XXNetworkingAnimationAction": [
+
     ]
   }
 }

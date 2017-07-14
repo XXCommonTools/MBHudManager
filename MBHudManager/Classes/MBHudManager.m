@@ -38,17 +38,17 @@ static MBHudManager *_instance = nil;
  *  @param message 信息
  */
 - (void)showMessage:(NSString *)message {
-    
+
     [self show:message icon:@"" inView:nil];
 }
 /**
- 在view上显示遮罩信息
+ 显示加载遮罩
  
- @param waitMessage 遮罩信息
- @param view 显示的视图
+ @param text 文字
+ @param view 显示的视图，如果为nil则显示在window上面
  */
-- (void)showWait:(NSString *)waitMessage inView:(UIView *)view {
-    
+- (void)showLoadingWithText:(NSString *)text inView:(UIView *)view {
+
     if (!view) {
         
         view = [UIApplication sharedApplication].windows.lastObject;
@@ -57,27 +57,28 @@ static MBHudManager *_instance = nil;
 #ifdef DEBUG
         NSLog(@"当前有正在显示的遮罩，隐藏之前的遮罩");
 #endif
-        [self hideWait];
+        [self hideLoading];
     }
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     
     hud.bezelView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.9];
-    hud.detailsLabel.text = waitMessage;
+    hud.detailsLabel.text = text;
     hud.contentColor = [UIColor whiteColor];
     hud.removeFromSuperViewOnHide = YES;
     
     self.hud = hud;
 }
+
 /**
- 隐藏遮罩
+ 隐藏加载遮罩
  */
-- (void)hideWait {
+- (void)hideLoading {
 
     [self.hud hideAnimated:YES];
     [self.hud removeFromSuperview];
     self.hud = nil;
 }
-
+#pragma mark - delegate
 #pragma mark - private
 /**
  *  显示信息
