@@ -1,0 +1,19 @@
+PODS:
+  - MBHudManager (0.1.0):
+    - MBProgressHUD (~> 1.0.0)
+  - MBProgressHUD (1.0.0)
+
+DEPENDENCIES:
+  - MBHudManager (from `../`)
+
+EXTERNAL SOURCES:
+  MBHudManager:
+    :path: ../
+
+SPEC CHECKSUMS:
+  MBHudManager: 76a2bb068ee3b826a82e6e3bf6d83e00ab1697a8
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+
+PODFILE CHECKSUM: c60ffb7c6924f47f64105367d60b09f55e93e3d3
+
+COCOAPODS: 1.1.1

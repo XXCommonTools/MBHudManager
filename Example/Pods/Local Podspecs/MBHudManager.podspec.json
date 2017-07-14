@@ -1,0 +1,27 @@
+{
+  "name": "MBHudManager",
+  "version": "0.1.0",
+  "summary": "A short description of MBHudManager.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/XXCommonTools/MBHudManager",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "yangzi": "595919268@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/XXCommonTools/MBHudManager.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "MBHudManager/Classes/**/*",
+  "dependencies": {
+    "MBProgressHUD": [
+      "~> 1.0.0"
+    ]
+  }
+}

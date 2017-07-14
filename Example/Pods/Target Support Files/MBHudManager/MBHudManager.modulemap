@@ -1,0 +1,6 @@
+framework module MBHudManager {
+  umbrella header "MBHudManager-umbrella.h"
+
+  export *
+  module * { export * }
+}
