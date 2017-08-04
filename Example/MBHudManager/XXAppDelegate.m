@@ -7,6 +7,11 @@
 //
 
 #import "XXAppDelegate.h"
+#import <XXNetwork/XXNetworkAnimation.h>
+
+@interface XXAppDelegate ()<XXNetworkingAnimationAction>
+
+@end
 
 @implementation XXAppDelegate
 

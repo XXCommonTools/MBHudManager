@@ -5,11 +5,12 @@ source 'https://github.com/XXCommonTools/XXRepos.git'
 
 
 target 'MBHudManager_Example' do
+    
   pod 'MBHudManager', :path => '../'
 
   target 'MBHudManager_Tests' do
     inherit! :search_paths
 
-    
+
   end
 end

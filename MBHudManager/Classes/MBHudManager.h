@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <XXNetworkingAnimationAction/XXNetworkAnimation.h>
+#import <XXNetwork/XXNetworkAnimation.h>
 
 
 @interface MBHudManager : NSObject<XXNetworkingAnimationAction>

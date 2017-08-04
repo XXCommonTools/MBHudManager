@@ -10,8 +10,8 @@
 #endif
 #endif
 
-#import "MBHudManager.h"
+#import "XXNetworkAnimation.h"
 
-FOUNDATION_EXPORT double MBHudManagerVersionNumber;
-FOUNDATION_EXPORT const unsigned char MBHudManagerVersionString[];
+FOUNDATION_EXPORT double XXNetworkVersionNumber;
+FOUNDATION_EXPORT const unsigned char XXNetworkVersionString[];
 

@@ -1,22 +1,22 @@
 PODS:
-  - MBHudManager (0.1.1):
+  - MBHudManager (0.1.2):
     - MBProgressHUD (~> 1.0.0)
-    - XXNetworkingAnimationAction
+    - XXNetwork/XXNetworkAnimation
   - MBProgressHUD (1.0.0)
-  - XXNetworkingAnimationAction (0.1.2)
+  - XXNetwork/XXNetworkAnimation (0.1.9)
 
 DEPENDENCIES:
   - MBHudManager (from `../`)
 
 EXTERNAL SOURCES:
   MBHudManager:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  MBHudManager: 5d96a2846b57b62db6b37e9d58c876cef1bcc066
+  MBHudManager: 3eabc7f67443dd150590ba716a784f3b7e77830b
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
-  XXNetworkingAnimationAction: 5a9aa95f3e33d0c02f1835027f748c7f08c3e6de
+  XXNetwork: 6fe25ecdf894a9e37cb81ba29a73675bcddd1b2d
 
-PODFILE CHECKSUM: 665628678dcf7f19fa1be79cbb2c3b73bf3ded17
+PODFILE CHECKSUM: 82ff72bc0ec81673b793961e3d4fbc9ca5266842
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.1
