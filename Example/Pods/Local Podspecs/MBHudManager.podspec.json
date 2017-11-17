@@ -21,7 +21,7 @@
   "source_files": "MBHudManager/Classes/**/*",
   "dependencies": {
     "MBProgressHUD": [
-      "~> 1.0.0"
+
     ],
     "XXNetwork/XXNetworkAnimation": [
 
