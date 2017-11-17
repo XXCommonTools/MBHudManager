@@ -1,6 +1,6 @@
 {
   "name": "MBHudManager",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "summary": "MBHudManager is a HUD tool.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/XXCommonTools/MBHudManager",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/XXCommonTools/MBHudManager.git",
-    "tag": "0.1.2"
+    "tag": "0.1.3"
   },
   "platforms": {
     "ios": "8.0"

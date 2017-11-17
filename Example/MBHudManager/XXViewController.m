@@ -22,22 +22,21 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
-
-    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setBackgroundColor:[UIColor redColor]];
+    btn.frame = CGRectMake(100, 100, 100, 100);
+    [btn setTitle:@"加载" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(btnAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
 }
-- (void)viewDidAppear:(BOOL)animated {
-
-    [super viewDidAppear:animated];
+- (void)btnAction {
     
-    dispatch_after(10, dispatch_get_main_queue(), ^{
+    [[MBHudManager sharedManager] showLoadingWithText:@"正在加载信息..." inView:self.view];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
-        [[MBHudManager sharedManager] showLoadingWithText:@"正在加载信息..." inView:self.view];
-        
-        dispatch_after(20, dispatch_get_main_queue(), ^{
-           
-            [[MBHudManager sharedManager] showMessage:@"请求成功"];
-        });
+        [[MBHudManager sharedManager] hideLoading];
+        [[MBHudManager sharedManager] showMessage:@"请求成功"];
     });
 }
 - (void)didReceiveMemoryWarning

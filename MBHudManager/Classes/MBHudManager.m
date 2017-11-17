@@ -61,11 +61,12 @@ static MBHudManager *_instance = nil;
     }
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     
-    hud.bezelView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.9];
-    hud.detailsLabel.text = text;
-    hud.contentColor = [UIColor whiteColor];
+    hud.labelText = text;
+    hud.labelColor = [UIColor whiteColor];
+//    hud.bezelView.backgroundColor =
+//    hud.detailsLabel.text = text;
+//    hud.contentColor = [UIColor whiteColor];
     hud.removeFromSuperViewOnHide = YES;
-    
     self.hud = hud;
 }
 
@@ -74,7 +75,7 @@ static MBHudManager *_instance = nil;
  */
 - (void)hideLoading {
 
-    [self.hud hideAnimated:YES];
+    [self.hud hide:YES];
     [self.hud removeFromSuperview];
     self.hud = nil;
 }
@@ -96,9 +97,11 @@ static MBHudManager *_instance = nil;
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     
     //设置hud颜色
-    hud.bezelView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.9];
-    hud.detailsLabel.text = text;
-    hud.contentColor = [UIColor whiteColor];
+    hud.labelText = text;
+    
+//    hud.bezelView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.9];
+//    hud.detailsLabel.text = text;
+//    hud.contentColor = [UIColor whiteColor];
     
     // 设置图片
     hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:icon]];
@@ -109,7 +112,7 @@ static MBHudManager *_instance = nil;
     hud.removeFromSuperViewOnHide = YES;
     
     // 2秒之后再消失
-    [hud hideAnimated:YES afterDelay:2.0f];
+    [hud hide:YES afterDelay:2.0f];
 }
 #pragma mark - getters and setters
 
