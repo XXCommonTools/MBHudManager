@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'MBHudManager'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'MBHudManager is a HUD tool.'
   s.description      = <<-DESC
 TODO: Add long description of the pod here.

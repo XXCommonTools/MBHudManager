@@ -28,6 +28,25 @@
     [btn setTitle:@"加载" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(btnAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
+    
+    NSArray *array = @[
+                       @{@"name":@"张三",
+                         @"age":@"18"
+                         },
+                       @{@"name":@"李四",
+                         @"age":@"19"
+                         }
+                       ];
+    
+    NSDictionary *dict = array.firstObject;
+    NSLog(@"dict:%@,%p",dict,dict);
+    NSDictionary *temp = @{@"name":@"王武",@"age":@"100"};
+    dict = temp;
+    NSLog(@"dict:%@,%p",dict,dict);
+    for (NSDictionary *dict in array) {
+        
+        NSLog(@"dict:%@,%p",dict,dict);
+    }
 }
 - (void)btnAction {
     

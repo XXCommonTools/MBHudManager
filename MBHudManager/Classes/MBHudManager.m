@@ -51,7 +51,7 @@ static MBHudManager *_instance = nil;
 
     if (!view) {
         
-        view = [UIApplication sharedApplication].windows.lastObject;
+        view = [UIApplication sharedApplication].keyWindow;
     }
     if (self.hud) {
 #ifdef DEBUG
@@ -91,7 +91,7 @@ static MBHudManager *_instance = nil;
     
     if (!view) {
         
-        view = [UIApplication sharedApplication].windows.lastObject;
+        view = [UIApplication sharedApplication].keyWindow;
     }
     // 快速显示一个提示信息
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
