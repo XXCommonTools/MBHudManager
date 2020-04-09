@@ -61,8 +61,8 @@ static MBHudManager *_instance = nil;
     }
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     
-    hud.labelText = text;
-    hud.labelColor = [UIColor whiteColor];
+    hud.label.text = text;
+    hud.label.textColor = [UIColor whiteColor];
 //    hud.bezelView.backgroundColor =
 //    hud.detailsLabel.text = text;
 //    hud.contentColor = [UIColor whiteColor];
@@ -75,7 +75,8 @@ static MBHudManager *_instance = nil;
  */
 - (void)hideLoading {
 
-    [self.hud hide:YES];
+//    [self.hud hide:YES];
+    [self.hud hideAnimated:YES];
     [self.hud removeFromSuperview];
     self.hud = nil;
 }
@@ -97,7 +98,7 @@ static MBHudManager *_instance = nil;
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     
     //设置hud颜色
-    hud.labelText = text;
+    hud.label.text = text;
     
 //    hud.bezelView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.9];
 //    hud.detailsLabel.text = text;
@@ -112,7 +113,8 @@ static MBHudManager *_instance = nil;
     hud.removeFromSuperViewOnHide = YES;
     
     // 2秒之后再消失
-    [hud hide:YES afterDelay:2.0f];
+//    [hud hide:YES afterDelay:2.0f];
+    [hud hideAnimated:YES afterDelay:2.0f];
 }
 #pragma mark - getters and setters
 
