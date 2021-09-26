@@ -63,9 +63,6 @@ static MBHudManager *_instance = nil;
     
     hud.label.text = text;
     hud.label.textColor = [UIColor whiteColor];
-//    hud.bezelView.backgroundColor =
-//    hud.detailsLabel.text = text;
-//    hud.contentColor = [UIColor whiteColor];
     hud.removeFromSuperViewOnHide = YES;
     self.hud = hud;
 }
@@ -97,12 +94,9 @@ static MBHudManager *_instance = nil;
     // 快速显示一个提示信息
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     
-    //设置hud颜色
-    hud.label.text = text;
-    
-//    hud.bezelView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.9];
-//    hud.detailsLabel.text = text;
-//    hud.contentColor = [UIColor whiteColor];
+    //多行展示文字
+    hud.detailsLabel.text = text;
+    hud.detailsLabel.font = [UIFont boldSystemFontOfSize:16];
     
     // 设置图片
     hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:icon]];
@@ -113,7 +107,6 @@ static MBHudManager *_instance = nil;
     hud.removeFromSuperViewOnHide = YES;
     
     // 2秒之后再消失
-//    [hud hide:YES afterDelay:2.0f];
     [hud hideAnimated:YES afterDelay:2.0f];
 }
 #pragma mark - getters and setters
